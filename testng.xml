@@ -7,10 +7,10 @@
       <class name="ca.shopAmazon.ProcessOrderTests"/>
     </classes>
   </test>
-  <test name="FirefoxTest">
+  <!-- <test name="FirefoxTest">
   	<parameter name="browser" value="Firefox"/>
     <classes>
       <class name="ca.shopAmazon.ProcessOrderTests"/>
     </classes>
-  </test>
+  </test> -->
 </suite>

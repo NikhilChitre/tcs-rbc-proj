@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [MultiBrowserSuite]" parallel="tests">
-  <test thread-count="2" name="FirefoxTest(failed)" parallel="tests">
-    <parameter name="browser" value="Firefox"/>
+  <test thread-count="2" name="ChromeTest(failed)" parallel="tests">
+    <parameter name="browser" value="Chrome"/>
     <classes>
       <class name="ca.shopAmazon.ProcessOrderTests">
         <methods>
@@ -12,5 +12,5 @@
         </methods>
       </class> <!-- ca.shopAmazon.ProcessOrderTests -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
+  </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [MultiBrowserSuite] -->

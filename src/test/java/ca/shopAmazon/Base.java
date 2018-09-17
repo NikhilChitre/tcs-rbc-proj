@@ -1,4 +1,4 @@
-package ca.amazon.setup;
+package ca.shopAmazon;
 
 import java.util.concurrent.TimeUnit;
 

@@ -21,5 +21,4 @@ public class AbstractPage {
 		this.wait = wait;
 		PageFactory.initElements(driver, this);
 	}
-
 }

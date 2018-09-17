@@ -1,10 +1,16 @@
 package ca.amazon.utilities;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.testng.Reporter;
 
 /**
  * 
@@ -46,5 +52,16 @@ public class FileUtils {
 			}
 		}
 		return propMap;
+	}
+	
+	/**
+	 * Method to take screen shot
+	 * @throws IOException 
+	 */
+	public static void getScreenShot(WebDriver driver) throws IOException {
+		String screenShotsDir = props.getProperty("screenShotsDir") + "/" + driver.getTitle() + ".jpeg";
+		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		org.apache.commons.io.FileUtils.copyFile(scrFile, new File(screenShotsDir));
+		Reporter.log("Screen shot file located at " + screenShotsDir);
 	}
 }
